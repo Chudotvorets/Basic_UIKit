@@ -117,8 +117,8 @@ class TableViewPresentor: TablePresentorProtocol, TableViewCellProtocol {
                         return
                     }
                 }
-                let data = Data(model.photo.utf8)
-                SQLiteCommands.insertRow(DatabaseModel(id: model.id, firstName: model.firstName, lastName: model.lastName, photo: data))
+                
+                SQLiteCommands.insertRow(DatabaseModel(id: model.id, firstName: model.firstName, lastName: model.lastName, photo: model.photo))
                 
             } else {
                 SQLiteCommands.deleteRow(profileId: model.id)

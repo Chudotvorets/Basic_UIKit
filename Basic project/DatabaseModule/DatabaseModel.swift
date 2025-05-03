@@ -11,5 +11,5 @@ struct DatabaseModel {
     let id: String
     let firstName: String
     let lastName: String
-    let photo: Data
+    let photo: String
 }

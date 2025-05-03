@@ -74,8 +74,8 @@ class CollectionViewPresentor: CollectionPresentorProtocol, CollectionViewCellPr
         var cellModel: [CollectionModel] = []
         
         for x in model {
-            let string = String(decoding: x.photo, as: UTF8.self)
-            cellModel.append(CollectionModel(id: x.id, firstName: x.firstName, lastName: x.lastName, photo: string ))
+            //let string = String(decoding: x.photo, as: UTF8.self)
+            cellModel.append(CollectionModel(id: x.id, firstName: x.firstName, lastName: x.lastName, photo: x.photo ))
         }
         completion(cellModel)
     }

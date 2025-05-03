@@ -11,10 +11,10 @@ import SQLite3
 class SQLiteCommands {
     
     static var table = Table("databaseModel")
-    static let id = Expression<String>("id")
-    static let firstName = Expression<String>("firstName")
-    static let lastName = Expression<String>("lastName")
-    static let photo = Expression<Data>("photo")
+    static let id = Expression<String>(value: "id")
+    static let firstName = Expression<String>(value: "firstName")
+    static let lastName = Expression<String>(value: "lastName")
+    static let photo = Expression<String>(value: "photo")
     
     static func createTable() {
         guard let database = SQLiteDatabase.general.database else {
